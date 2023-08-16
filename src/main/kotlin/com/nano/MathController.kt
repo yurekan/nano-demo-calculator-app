@@ -1,5 +1,5 @@
 package com.nano
-// Updating headers
+
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Body
@@ -25,6 +25,6 @@ class MathController {
 
     @Post("/subtract", produces = [MediaType.APPLICATION_JSON])
     fun subtract(@Body @NotNull numbers: Numbers): HttpResponse<String> {
-        return HttpResponse.ok("""{"result": ${numbers.first - numbers.second} }""")
-    }
+        return HttpResponse.ok("""{"result": ${numbers.first - numbers.second} }""")
+    }
 }
